@@ -24,7 +24,7 @@ echo "\nMinusculo novamente: ", $str;
 
 $exerc3 = "o php foi criado em mil novecentos e noventa e cinco";
 echo "\nAntes do comando replace: \n",$exerc3;
-$exerc3 =  str_replace(['o','a','i']['0','4','1'], subject; $exerc3);
+$exerc3 =  str_replace(['o','a','i'], replace: ['0','4','1'], subject: $exerc3);
 echo "\nApós o comando replace: \n", $exerc3
 
    ?>
