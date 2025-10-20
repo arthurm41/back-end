@@ -46,57 +46,57 @@
 
 // exercicio 1
 
-// interface Forma {
-//     public function calcularArea(): float;
-// }
+interface Forma {
+    public function calcularArea(): float;
+}
 
-// class Quadrado implements Forma {
-//     private float $lado;
+class Quadrado implements Forma {
+    private float $lado;
 
-//     public function __construct(float $lado) {
-//         $this->lado = $lado;
-//     }
+    public function __construct(float $lado) {
+        $this->lado = $lado;
+    }
 
-//     public function calcularArea(): float {
-//         return $this->lado * $this->lado;
-//     }
-// }
+    public function calcularArea(): float {
+        return $this->lado * $this->lado;
+    }
+}
 
-// class Retangulo implements Forma {
-//     private float $base;
-//     private float $altura;
+class Retangulo implements Forma {
+    private float $base;
+    private float $altura;
 
-//     public function __construct(float $base, float $altura) {
-//         $this->base = $base;
-//         $this->altura = $altura;
-//     }
+    public function __construct(float $base, float $altura) {
+        $this->base = $base;
+        $this->altura = $altura;
+    }
 
-//     public function calcularArea(): float {
-//         return $this->base * $this->altura;
-//     }
-// }
+    public function calcularArea(): float {
+        return $this->base * $this->altura;
+    }
+}
 
-// class Circulo implements Forma {
-//     private float $raio;
+class Circulo implements Forma {
+    private float $raio;
 
-//     public function __construct(float $raio) {
-//         $this->raio = $raio;
-//     }
+    public function __construct(float $raio) {
+        $this->raio = $raio;
+    }
 
-//     public function calcularArea(): float {
-//         return pi() * $this->raio * $this->raio;
-//     }
-// }
+    public function calcularArea(): float {
+        return pi() * $this->raio * $this->raio;
+    }
+}
 
-// $formas = [
-//     new Quadrado(4),
-//     new Retangulo(5, 10),
-//     new Circulo(3)
-// ];
+$formas = [
+    new Quadrado(4),
+    new Retangulo(5, 10),
+    new Circulo(3)
+];
 
-// foreach ($formas as $forma) {
-//     echo "Área: " . $forma->calcularArea();
-// }
+foreach ($formas as $forma) {
+    echo "Área: " . $forma->calcularArea();
+}
 
 
 
@@ -292,3 +292,4 @@
 // $onibus->mover();
 // $onibus->abastecer(100);
 // $onibus->fazerManutencao();
+?>
