@@ -35,7 +35,13 @@ class BebidaDAO {
                 'qtde' => $bebida->getQtde()
             ];
         }
-        file_put_contents($this->arquivoJson, json_encode($dadosParaSalvar, JSON_PRETTY_PRINT));
+        
+        $jsonFormatado = json_encode(
+            $dadosParaSalvar, 
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+        );
+        
+        file_put_contents($this->arquivoJson, $jsonFormatado);
     }
 
     // CREATE
@@ -55,7 +61,33 @@ class BebidaDAO {
             $this->bebidasArray[$nome]->setValor($novoValor);
             $this->bebidasArray[$nome]->setQtde($novaQtde);
             $this->salvarArquivo();
+            return true;
         }
+        return false;
+    }
+
+    // UPDATE NOME
+    public function atualizarNomeBebida($nomeAntigo, $novoNome){
+        if(isset($this->bebidasArray[$nomeAntigo])){
+            $bebida = $this->bebidasArray[$nomeAntigo];
+            $bebida->setNome($novoNome);
+            unset($this->bebidasArray[$nomeAntigo]);
+            $this->bebidasArray[$novoNome] = $bebida;
+            $this->salvarArquivo();
+            return true;
+        }
+        return false;
+    }
+
+    // UPDATE CATEGORIA E VOLUME
+    public function atualizarCategoriaVolume($nome, $novaCategoria, $novoVolume){
+        if(isset($this->bebidasArray[$nome])){
+            $this->bebidasArray[$nome]->setCategoria($novaCategoria);
+            $this->bebidasArray[$nome]->setVolume($novoVolume);
+            $this->salvarArquivo();
+            return true;
+        }
+        return false;
     }
 
     // DELETE
@@ -63,6 +95,8 @@ class BebidaDAO {
         if(isset($this->bebidasArray[$nome])){
             unset($this->bebidasArray[$nome]);
             $this->salvarArquivo();
+            return true;
         }
+        return false;
     }
 }

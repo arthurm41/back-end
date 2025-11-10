@@ -21,6 +21,14 @@ class BebidaController {
         $this->dao->atualizarBebida($nome, $valor, $qtde);
     }
 
+    public function atualizarNome($nomeAntigo, $novoNome) {
+        $this->dao->atualizarNomeBebida($nomeAntigo, $novoNome);
+    }
+
+    public function atualizarCategoriaVolume($nome, $novaCategoria, $novoVolume) {
+        $this->dao->atualizarCategoriaVolume($nome, $novaCategoria, $novoVolume);
+    }
+
     public function deletar($nome) {
         $this->dao->excluirBebida($nome);
     }
