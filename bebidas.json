@@ -1,9 +1,30 @@
 {
-    "red bull": {
-        "nome": "red bull",
-        "categoria": "Energético",
-        "volume": "350ml",
-        "valor": "20.00",
+    "Red Bull": {
+        "nome": "Red Bull",
+        "categoria": "Suco",
+        "volume": "300ml",
+        "valor": "10.00",
+        "qtde": "100"
+    },
+    "Porto": {
+        "nome": "Porto",
+        "categoria": "Vinho",
+        "volume": "500ml",
+        "valor": "120.00",
+        "qtde": "144"
+    },
+    "White horse": {
+        "nome": "White horse",
+        "categoria": "Destilado",
+        "volume": "1L",
+        "valor": "100",
+        "qtde": "200"
+    },
+    "água": {
+        "nome": "água",
+        "categoria": "Água",
+        "volume": "1L",
+        "valor": "100",
         "qtde": "200"
     }
 }
