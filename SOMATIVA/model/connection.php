@@ -3,15 +3,13 @@
 class Connection {
     private static $instance = null;
 
-    private function __construct() {}
-
-    public static function getConnection() {
+    public static function getInstance() {
         if (!self::$instance) {
             try {
-                $host = "localhost";
-                $dbname = "Biblioteca";
-                $user = "root";
-                $pass = "1976";
+                $host = 'localhost';
+                $dbname = 'biblioteca';
+                $user = 'root';
+                $pass = '1234';
 
                 self::$instance = new PDO(
                     "mysql:host=$host;dbname=$dbname;charset=utf8",
@@ -25,7 +23,6 @@ class Connection {
                 die("Erro na conexão: " . $e->getMessage());
             }
         }
-
         return self::$instance;
     }
 }

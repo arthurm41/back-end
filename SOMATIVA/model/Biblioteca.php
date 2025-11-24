@@ -21,9 +21,8 @@ class Biblioteca {
     public function getGenero(){ return $this->genero; }
     public function getQuantidade(){ return $this->quantidade; }
 
-    public function setTitulo($t){ $this->titulo = $t; }
-    public function setAutor($a){ $this->autor = $a; }
-    public function setAno($a){ $this->ano = $a; }
-    public function setGenero($g){ $this->genero = $g; }
-    public function setQuantidade($q){ $this->quantidade = $q; }
+    public function setAutor($v){ $this->autor = $v; }
+    public function setAno($v){ $this->ano = $v; }
+    public function setGenero($v){ $this->genero = $v; }
+    public function setQuantidade($v){ $this->quantidade = $v; }
 }
